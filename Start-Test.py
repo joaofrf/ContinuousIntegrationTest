@@ -1,10 +1,12 @@
 import Start
+import os
 
 ResultFile = './test-results/Test-Results.txt'
 
 #Save to file
 def SaveToFile(Result):
-    file = open(ResultFile, "w")
+    os.remove(ResultFile)
+    file = open(ResultFile, "a+")
     file.write(Result + "\n")
     file.close()
     print(Result)

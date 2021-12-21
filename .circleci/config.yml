@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - run: sudo pip install requests
-      - run: python -u Start.py
+      - run: sudo python -u Start.py
   test:
     working_directory: ~/circleci-bitcliq-test
     docker: 
