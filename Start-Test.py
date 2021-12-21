@@ -1,6 +1,6 @@
 import Start
 
-ResultFile = 'test-results'
+ResultFile = './test-results/Test-Results.txt'
 
 #Save to file
 def SaveToFile(Result):
