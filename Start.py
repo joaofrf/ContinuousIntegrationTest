@@ -1,6 +1,5 @@
 #import requests and sys
 import requests
-import sys
 
 #Get request from url
 def getRequest(url):
@@ -19,7 +18,6 @@ def contains(string, substring):
 
 #Main init function for the program.
 def main():
-    print("Test Request!")
     result = getRequest(url="http://www.bitcliq.com") #Call getRequest function
     print(getSubstring(result, result.find("<title>")+7, result.find("</title>"))) #Call getSubstring function
     print(contains(result, "Bitcliq")) #Call contains function

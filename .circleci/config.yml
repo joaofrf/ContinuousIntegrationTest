@@ -11,6 +11,7 @@ jobs:
       - image: "circleci/python:3.6.4"
     steps:
       - checkout
+      - run: python -m pip install requests
       - run: python -u Start.py
   test:
     working_directory: ~/circleci-bitcliq-test
@@ -18,7 +19,17 @@ jobs:
       - image: "circleci/python:3.6.4"
     steps:
       - checkout
+      - run: python -m pip install requests
       - run: python -u Start-Test.py
+
+      # Save artifacts
+      - store_artifacts:
+          path: /tmp/artifacts
+          destination: build
+ 
+      # Upload test results
+      - store_test_results:
+          path: /tmp/test-reports
 
   
 
