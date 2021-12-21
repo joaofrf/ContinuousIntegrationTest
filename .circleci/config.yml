@@ -23,6 +23,7 @@ jobs:
     steps:
       - checkout
       - run: sudo pip install requests
+      - run: sudo mkdir test-results
       - run: python -u Start-Test.py
 
       # Save artifacts
