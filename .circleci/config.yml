@@ -17,6 +17,9 @@ jobs:
     working_directory: ~/circleci-bitcliq-test
     docker: 
       - image: "circleci/python:3.6.4"
+    environment:
+      PROJECT_NAME: test
+      TEST_RESULTS: /tmp/test-results
     steps:
       - checkout
       - run: sudo pip install requests
