@@ -5,7 +5,8 @@ ResultFile = './test-results/Test-Results.txt'
 
 #Save to file
 def SaveToFile(Result):
-    os.remove(ResultFile)
+    if os.path.exists(ResultFile):
+        os.remove(ResultFile)
     file = open(ResultFile, "a+")
     file.write(Result + "\n")
     file.close()
